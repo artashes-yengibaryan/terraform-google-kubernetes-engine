@@ -449,7 +449,7 @@ resource "google_container_node_pool" "pools" {
 
   lifecycle {
     ignore_changes = [initial_node_count]
-
+    create_before_destroy = true
   }
 
   timeouts {
